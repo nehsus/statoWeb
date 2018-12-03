@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125419797-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125419797-1');
+</script>
+
+	<title>Statosphere - predictive context, artificial intelligence, live analytics.</title>
+	<!-- meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- css -->
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/ionicons.min.css">
+	<link rel="stylesheet" href="/static/css/owl.carousel.css">
+	<link rel="stylesheet" href="/static/css/owl.theme.css">
+	<link rel="stylesheet" href="/static/css/animate.css">
+	<link rel="shortcut icon" href="/static/img/logo_220.png">
+
+	<link rel="stylesheet" href="/static/css/style.css">
+		<script type="text/javascript">
+
+  	var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+  </script>
+
+</head>
+<body id="home">
+
+	<!-- ****************************** Preloader ************************** -->
+
+	<div id="preloader"></div>
+
+	<!-- ****************************** Sidebar ************************** -->
+
+	<nav id="sidebar-wrapper">
+		<a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
+	    <ul class="sidebar-nav">
+		    <li><a href="#home">Home</a></li>
+			<li><a href="#features1">Features</a></li>
+			<li><a href="team">About us</a></li>
+			<!--<li><a href="#gallery">Product Screens</a></li>-->
+			<li><a href="#subscribe">Beta</a></li>
+			<li><a href="contact">Contact</a></li>
+	    </ul>
+	</nav>
+
+	<!-- ****************************** Header ************************** -->
+
+	<header class="sticky" id="header">
+		<section class="container">
+			<section class="row" id="logo_menu">
+				<section class="col-xs-6"><a class="logo" href="/">Statosphere</a></section>
+				<section class="col-xs-6"><a id="menu-toggle" href="#" class="toggle wow rotateIn" data-wow-delay="1s"><i class="ion-navicon"></i></a></section>
+			</section>
+		</section>
+	</header>
+
+	<!-- ****************************** Banner ************************** -->
+
+
+	<section id="banner" class="banner">
+  <section class="container">
+		    <div class="jumbotrons">
+
+
+  <h1>
+
+  <a href="" class="typewrite" data-period="2000" data-type='[ "Automated Interactions", "Artifical intelligence", "Instant semantics", "Performance insights"]'>
+    <span style = "font-size: 15px;" class="wrap"></span>
+  </a>
+</h1>
+</div>
+<div class="jumbotrons">
+  <p>Predictive context recognition and live insights, nurtured with human expertise and artifical intelligence</p>
+</div>
+<div class="wrapper" style="text-align:center">
+	<div>
+  </section>
+</section>
+
+	<!-- ****************************** Features Section ************************** -->
+	<section id = "Feat" style="background:#000019 !important;">
+	<section id="features1" class="block">
+		<section class="container">
+			<section class="row">
+				<div class="title-box"><h1 class="block-title wow ">
+				<span class="bb-top-left"></span>
+				<span class="bb-bottom-left"></span>
+				<div class="black">
+				Features
+			</div>
+				<span class="bb-top-right"></span>
+				<span class="bb-bottom-right"></span>
+				</h1></div>
+			</section>
+		</section>
+			<div class="row about-bg">
+			<section class="row">
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s">
+						<div class="member-item">
+								<div class="member-pic">
+										<img src="static/img/robot2.png" alt="member">
+								</div>
+								<div class = "black">
+								<h4 class="member-title">Automated Interactions</h4>
+									automated interaction supervision with valuable information
+									for organisations.
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s">
+						<div class="member-item">
+								<div class="member-pic">
+										<img src="static/img/aii.png" alt="member">
+										<div class="member-hover">
+										</div>
+								</div>
+								<div class = "black">
+								<h4 class="member-title">Artifical Intelligence</h4>
+									Predictive context and real-time profiling using deep-learning.
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.3s">
+						<div class="member-item">
+								<div class="member-pic">
+										<img src="static/img/hg.png" alt="member">
+										<div class="member-hover">
+
+										</div>
+								</div>
+								<div class = "black">
+								<h4 class="member-title">Instant semantics</h4>
+									No more long waits for valuable information. Get instant analytics for your feed.
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="feature-box wow animated flipInX" data-wow-delay="0.6s">
+						<div class="member-item">
+								<div class="member-pic">
+										<img src="static/img/rock.png" alt="member">
+										<div class="member-hover">
+
+										</div>
+								</div>
+								<div class = "black">
+								<h4 class="member-title">Performance insights</h4>
+								Precise insights nurtured with human expertise and computer vision.
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<div class="clearfix"></div>
+		</section>
+	</section>
+	<!-- ********************************End Of FeaturesSection*********************** -->
+
+	<!-- ****************************** Subscribe Section ************************** -->
+
+	<section id="subscribe">
+
+		<section class="container">
+
+			<section class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<p class="susbcribe-text">
+					<strong>We're working hard towards launching a successful Beta.<br>
+					</strong>We promise that you'll hear from us as soon as we start sending invites.</p>
+				</div>
+			</section>
+		</section>
+		<section class="container subscribe-wrap">
+			<section class="row">
+				<div class="col-sm-12">
+					<div class="row">
+						<form role="form" action="" method="">
+							<div class="col-xs-10">
+								<div class="form-group">
+									<input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Enter email">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<button type="submit" class="btn-custom">
+								<i class="ion-ios-arrow-thin-right"></i>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+
+	<!-- ****************************** Contact Section ************************** -->
+
+	<section id="contact">
+			<div class="container">
+				<div class="col-sm-7">
+					<ul class="address-list">
+						<li><a href="/"> Home</a></li>
+						<!--<li><a href = "feature">Features</a></li>-->
+
+
+						<li><a href = "contact">Contact</a></li>
+
+						<!--<li><a href = "blog">Blog</a></li>-->
+					</ul>
+
+						 <ul class = "address-list pad-up">
+							 <li> <a href = "privacy">Privacy Policy </a></li>
+						 </ul>
+
+						<p class="black">&copy; 2018 Statosphere Technology Pvt Ltd</p>
+
+				</div>
+			</div>
+		</section>
+		<!--Privacy Policy Security-->
+
+		<!-- ****************************** Footer ************************** -->
+
+
+
+
+	<!-- All the scripts -->
+
+<script src="/static/js/jquery-2.1.3.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script src="/static/js/wow.min.js"></script>
+	<script src="/static/js/owl.carousel.js"></script>
+	<script src="/static/js/script.js"></script>
+
+</body>
+</html>
